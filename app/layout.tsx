@@ -1,8 +1,8 @@
 import type {Metadata} from 'next';
-import { Montserrat, Archivo_Black } from 'next/font/google';
+import { Outfit, Archivo_Black } from 'next/font/google';
 import './globals.css';
 
-const montserrat = Montserrat({
+const outfit = Outfit({
   subsets: ['latin'],
   variable: '--font-montserrat',
 });
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="sk">
-      <body className={`${montserrat.variable} ${archivoBlack.variable} font-sans antialiased`} suppressHydrationWarning>{children}</body>
+      <body className={`${outfit.variable} ${archivoBlack.variable} font-sans antialiased`} suppressHydrationWarning>{children}</body>
     </html>
   );
 }
