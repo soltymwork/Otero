@@ -11,7 +11,7 @@ export default function Navbar() {
         <div className="w-10 h-10 border border-white/30 rounded-full flex items-center justify-center backdrop-blur-sm bg-black/20">
           <ArrowLeft size={16} />
         </div>
-        <span className="text-xs font-bold tracking-[0.2em] uppercase">Späť na rozcestník</span>
+        <span className="text-xs font-bold tracking-[0.2em] uppercase">Späť na úvod</span>
       </Link>
     </nav>
   );
