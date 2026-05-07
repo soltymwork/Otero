@@ -34,7 +34,8 @@ export default function SplitHero() {
         onMouseLeave={() => setHoveredSide(null)}
       >
         <motion.div
-          className="absolute inset-0 md:inset-y-0 md:left-0 md:w-[100vw]"
+          className="absolute inset-0 md:inset-y-0 md:left-0"
+          style={isDesktop ? { width: '100vw' } : undefined}
           animate={{ x: hoveredSide === 'left' ? -10 : hoveredSide === 'right' ? 10 : 0 }}
           transition={imgTransition}
         >
@@ -82,7 +83,8 @@ export default function SplitHero() {
         onMouseLeave={() => setHoveredSide(null)}
       >
         <motion.div
-          className="absolute inset-0 md:inset-y-0 md:right-0 md:w-[100vw]"
+          className="absolute inset-0 md:inset-y-0 md:right-0"
+          style={isDesktop ? { width: '100vw' } : undefined}
           animate={{ x: hoveredSide === 'right' ? 10 : hoveredSide === 'left' ? -10 : 0 }}
           transition={imgTransition}
         >
