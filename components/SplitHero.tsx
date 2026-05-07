@@ -21,7 +21,7 @@ export default function SplitHero() {
   const modalTransition = { duration: 0.6 } as const;
 
   return (
-    <div className="h-[100dvh] w-full bg-white md:p-6 flex flex-col md:flex-row p-0 gap-[2px] md:gap-0">
+    <div className="h-[100dvh] w-full bg-white p-4 md:p-6 flex flex-col md:flex-row">
 
       {/* Ľavý / Horný panel */}
       <div
