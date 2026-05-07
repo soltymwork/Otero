@@ -21,7 +21,7 @@ export default function SplitHero() {
   const modalTransition = { duration: 0.6 } as const;
 
   return (
-    <div className="h-screen w-full bg-white p-4 md:p-6 flex flex-col md:flex-row overflow-hidden">
+    <div className="h-[100dvh] w-full bg-white md:p-6 flex flex-col md:flex-row p-0 gap-[2px] md:gap-0">
 
       {/* Ľavý / Horný panel */}
       <div
@@ -34,8 +34,7 @@ export default function SplitHero() {
         onMouseLeave={() => setHoveredSide(null)}
       >
         <motion.div
-          className="absolute inset-y-0 left-0"
-          style={{ width: '100vw' }}
+          className="absolute inset-0 md:inset-y-0 md:left-0 md:w-[100vw]"
           animate={{ x: hoveredSide === 'left' ? -10 : hoveredSide === 'right' ? 10 : 0 }}
           transition={imgTransition}
         >
@@ -83,8 +82,7 @@ export default function SplitHero() {
         onMouseLeave={() => setHoveredSide(null)}
       >
         <motion.div
-          className="absolute inset-y-0 right-0"
-          style={{ width: '100vw' }}
+          className="absolute inset-0 md:inset-y-0 md:right-0 md:w-[100vw]"
           animate={{ x: hoveredSide === 'right' ? 10 : hoveredSide === 'left' ? -10 : 0 }}
           transition={imgTransition}
         >
