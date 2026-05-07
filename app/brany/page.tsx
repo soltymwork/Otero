@@ -10,7 +10,7 @@ export default function BranyPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section id="domov" className="relative h-[70vh] w-full flex items-start md:items-center justify-center overflow-hidden">
+      <section id="domov" className="relative h-[70vh] w-full flex items-center justify-center overflow-hidden">
         <NavbarBrany />
         <div className="absolute inset-0 z-0">
           <Image
@@ -24,7 +24,7 @@ export default function BranyPage() {
           <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-white to-transparent" />
         </div>
 
-        <div className="relative z-10 text-center px-4 max-w-5xl mx-auto pt-20 md:pt-0 md:mt-16">
+        <div className="relative z-10 text-center px-4 max-w-5xl mx-auto mt-16">
           <h1 className="font-[family-name:var(--font-archivo-black)] text-2xl md:text-3xl lg:text-4xl uppercase tracking-[0.1em] mb-6">
             <span className="text-neutral-950">Elegancia</span><br /><span className="text-white">Otero AluGates</span>
           </h1>
