@@ -24,10 +24,10 @@ export default function BranyPage() {
         </div>
         
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-16">
-          <h1 className="text-4xl md:text-7xl font-bold text-white uppercase tracking-[0.2em] mb-6 [text-shadow:0_0_12px_rgba(255,255,255,0.2)]">
+          <h1 className="font-[family-name:var(--font-archivo-black)] text-4xl md:text-7xl text-white uppercase tracking-[0.1em] mb-6">
             Elegancia<br />Otero AluGates
           </h1>
-          <p className="text-sm md:text-base text-white tracking-widest font-light uppercase max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm md:text-base text-white/70 tracking-widest font-light uppercase max-w-2xl mx-auto leading-relaxed">
             Prvotriedne hliníkové brány a oplotenia na mieru s doživotnou odolnosťou voči korózii a nadčasovým dizajnom.
           </p>
         </div>
