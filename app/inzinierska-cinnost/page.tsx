@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import NavbarInzinierska from '@/components/NavbarInzinierska';
-import ContactForm from '@/components/ContactForm';
+import ContactFormInzinierska from '@/components/ContactFormInzinierska';
 import Footer from '@/components/Footer';
 import { PencilRuler, FileText, Gavel, Home, Search, Key, Shield, Clock, Users, Check } from 'lucide-react';
 import StatsSection from '@/components/StatsSection';
@@ -222,7 +222,7 @@ export default function InzinierskaCinnostPage() {
             </div>
           </div>
           <div className="lg:w-1/2 flex justify-start lg:justify-end">
-            <ContactForm />
+            <ContactFormInzinierska />
           </div>
         </div>
       </section>
