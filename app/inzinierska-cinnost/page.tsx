@@ -23,7 +23,7 @@ export default function InzinierskaCinnostPage() {
           <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-black to-transparent" />
         </div>
         
-        <div className="relative z-10 text-center px-4 max-w-5xl mx-auto mt-16">
+        <div className="relative z-10 text-center px-4 max-w-5xl mx-auto mt-4 md:mt-16">
           <h1 className="font-[family-name:var(--font-archivo-black)] text-2xl md:text-3xl lg:text-4xl text-white uppercase tracking-[0.1em] mb-6">
             Komplexná inžinierska činnosť<br />pre váš stavebný zámer
           </h1>
