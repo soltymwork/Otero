@@ -10,10 +10,10 @@ export default function SplitHero() {
   const [hoveredSide, setHoveredSide] = useState<'left' | 'right' | null>(null);
 
   return (
-    <div className="flex h-screen w-full overflow-hidden bg-black text-white selection:bg-white selection:text-black">
+    <div className="flex h-screen w-full bg-black text-white selection:bg-white selection:text-black p-4 md:p-6 gap-3 md:gap-4">
       {/* Left Side - Hliníkové brány */}
       <motion.div
-        className="relative flex h-full cursor-pointer flex-col items-center justify-center border-r-[0.5px] border-white/20"
+        className="relative flex h-full cursor-pointer flex-col items-center justify-center overflow-hidden rounded-sm"
         onHoverStart={() => setHoveredSide('left')}
         onHoverEnd={() => setHoveredSide(null)}
         animate={{
@@ -22,30 +22,48 @@ export default function SplitHero() {
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       >
         <div className="absolute inset-0 z-0">
-          <Image 
+          <Image
             src="https://jhrgate.com/wp-content/uploads/2024/08/94.jpg"
             alt="Hliníkové brány"
             fill
             priority
             className="object-cover transition-opacity duration-700"
-            style={{ 
+            style={{
               filter: hoveredSide === 'right' ? 'grayscale(100%)' : 'grayscale(0%)',
               opacity: hoveredSide === 'right' ? 0.4 : 0.8
             }}
           />
         </div>
-        
+
         <Link href="/brany" className="relative z-10 flex flex-col items-center justify-center group w-full h-full">
-           <div className="bg-white px-16 py-12 flex flex-col items-center justify-center font-bold tracking-[0.2em] text-center shadow-2xl transition-transform duration-500 hover:scale-105">
-              <h1 className="text-4xl md:text-6xl text-black uppercase mb-4 tracking-[0.3em]">Hliníkové Brány</h1>
-              <p className="text-xs md:text-sm tracking-[0.4em] font-medium text-black">ZISTIŤ VIAC</p>
-           </div>
-           
-           <motion.div 
+           <motion.div
+             className="px-10 py-8 flex flex-col items-center justify-center font-bold tracking-[0.2em] text-center shadow-2xl"
+             animate={{
+               backgroundColor: hoveredSide === 'left' ? '#000000' : '#ffffff',
+             }}
+             transition={{ duration: 0.4 }}
+           >
+              <motion.h1
+                className="text-2xl md:text-4xl uppercase mb-3 tracking-[0.3em]"
+                animate={{ color: hoveredSide === 'left' ? '#ffffff' : '#000000' }}
+                transition={{ duration: 0.4 }}
+              >
+                Hliníkové Brány
+              </motion.h1>
+              <motion.p
+                className="text-xs tracking-[0.4em] font-medium"
+                animate={{ color: hoveredSide === 'left' ? '#ffffff' : '#000000' }}
+                transition={{ duration: 0.4 }}
+              >
+                ZISTIŤ VIAC
+              </motion.p>
+           </motion.div>
+
+           <motion.div
              className="absolute left-8 top-1/2 -translate-y-1/2 text-white"
-             animate={{ 
+             animate={{
                opacity: hoveredSide === 'left' ? 1 : 0,
-               x: hoveredSide === 'left' ? 20 : 0 
+               x: hoveredSide === 'left' ? 20 : 0
              }}
              transition={{ duration: 0.4 }}
            >
@@ -56,7 +74,7 @@ export default function SplitHero() {
 
       {/* Right Side - Inžinierska činnosť */}
       <motion.div
-        className="relative flex h-full cursor-pointer flex-col items-center justify-center"
+        className="relative flex h-full cursor-pointer flex-col items-center justify-center overflow-hidden rounded-sm"
         onHoverStart={() => setHoveredSide('right')}
         onHoverEnd={() => setHoveredSide(null)}
         animate={{
@@ -65,13 +83,13 @@ export default function SplitHero() {
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       >
          <div className="absolute inset-0 z-0">
-          <Image 
+          <Image
             src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1920&auto=format&fit=crop"
             alt="Inžinierska činnosť"
             fill
             priority
             className="object-cover transition-opacity duration-700"
-            style={{ 
+            style={{
               filter: hoveredSide === 'left' ? 'grayscale(100%)' : 'grayscale(0%)',
               opacity: hoveredSide === 'left' ? 0.4 : 0.8
             }}
@@ -79,16 +97,34 @@ export default function SplitHero() {
         </div>
 
         <Link href="/inzinierska-cinnost" className="relative z-10 flex flex-col items-center justify-center group w-full h-full">
-           <div className="bg-black rounded-full w-[350px] h-[350px] md:w-[450px] md:h-[450px] flex flex-col items-center justify-center font-bold tracking-[0.2em] text-center shadow-2xl transition-transform duration-500 hover:scale-105">
-              <h1 className="text-3xl md:text-5xl uppercase mb-4 text-white tracking-[0.3em] leading-tight">Inžinierska<br/>Činnosť</h1>
-              <p className="text-xs md:text-sm tracking-[0.4em] font-medium text-white">ZISTIŤ VIAC</p>
-           </div>
+           <motion.div
+             className="rounded-full w-[260px] h-[260px] md:w-[340px] md:h-[340px] flex flex-col items-center justify-center font-bold tracking-[0.2em] text-center shadow-2xl"
+             animate={{
+               backgroundColor: hoveredSide === 'right' ? '#ffffff' : '#000000',
+             }}
+             transition={{ duration: 0.4 }}
+           >
+              <motion.h1
+                className="text-2xl md:text-4xl uppercase mb-3 tracking-[0.3em] leading-tight text-center"
+                animate={{ color: hoveredSide === 'right' ? '#000000' : '#ffffff' }}
+                transition={{ duration: 0.4 }}
+              >
+                Inžinierska<br/>Činnosť
+              </motion.h1>
+              <motion.p
+                className="text-xs tracking-[0.4em] font-medium"
+                animate={{ color: hoveredSide === 'right' ? '#000000' : '#ffffff' }}
+                transition={{ duration: 0.4 }}
+              >
+                ZISTIŤ VIAC
+              </motion.p>
+           </motion.div>
 
-           <motion.div 
+           <motion.div
              className="absolute right-8 top-1/2 -translate-y-1/2 text-white"
-             animate={{ 
+             animate={{
                opacity: hoveredSide === 'right' ? 1 : 0,
-               x: hoveredSide === 'right' ? -20 : 0 
+               x: hoveredSide === 'right' ? -20 : 0
              }}
              transition={{ duration: 0.4 }}
            >
