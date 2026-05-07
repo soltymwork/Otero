@@ -7,7 +7,7 @@ import StatsSection from '@/components/StatsSection';
 
 export default function InzinierskaCinnostPage() {
   return (
-    <main className="min-h-screen bg-[#111111] text-white selection:bg-white selection:text-black">
+    <main className="min-h-screen bg-black text-white/85 selection:bg-white selection:text-black">
       <Navbar />
       
       {/* Hero Section */}
