@@ -96,14 +96,14 @@ export default function BranyPage() {
               </ul>
             </div>
           </div>
-          <div className="relative h-[400px] w-full bg-neutral-100 p-4">
+          <div className="relative h-[400px] w-full bg-neutral-100">
             <ScrollColorImage src="https://jhrgate.com/wp-content/uploads/2024/08/P1-1.jpg" alt="Samonosná brána" referrerPolicy="no-referrer" />
           </div>
         </div>
 
         {/* Typ 2: Koľajnicové */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="order-2 lg:order-1 relative h-[400px] w-full bg-neutral-100 p-4">
+          <div className="order-2 lg:order-1 relative h-[400px] w-full bg-neutral-100">
             <ScrollColorImage src="https://acefence1961.com/wp-content/uploads/2024/05/image-1-1.jpg" alt="Koľajnicová brána" referrerPolicy="no-referrer" />
           </div>
           <div className="order-1 lg:order-2">
@@ -136,7 +136,7 @@ export default function BranyPage() {
               </ul>
             </div>
           </div>
-          <div className="relative h-[400px] w-full bg-neutral-100 p-4">
+          <div className="relative h-[400px] w-full bg-neutral-100">
             <ScrollColorImage src="https://jhrgate.com/wp-content/uploads/2024/08/32-4.jpg" alt="Krídlová brána" referrerPolicy="no-referrer" />
           </div>
         </div>
