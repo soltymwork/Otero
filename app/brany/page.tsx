@@ -2,6 +2,8 @@ import Image from 'next/image';
 import NavbarBrany from '@/components/NavbarBrany';
 import ContactForm from '@/components/ContactForm';
 import Footer from '@/components/Footer';
+import ScrollColorImage from '@/components/ScrollColorImage';
+import GallerySlider from '@/components/GallerySlider';
 import { Check, Clock, Palette, Weight } from 'lucide-react';
 
 export default function BranyPage() {
@@ -95,14 +97,14 @@ export default function BranyPage() {
             </div>
           </div>
           <div className="relative h-[400px] w-full bg-neutral-100 p-4">
-             <Image src="https://jhrgate.com/wp-content/uploads/2024/08/P1-1.jpg" alt="Samonosná brána" fill className="object-cover grayscale hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
+            <ScrollColorImage src="https://jhrgate.com/wp-content/uploads/2024/08/P1-1.jpg" alt="Samonosná brána" referrerPolicy="no-referrer" />
           </div>
         </div>
 
         {/* Typ 2: Koľajnicové */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="order-2 lg:order-1 relative h-[400px] w-full bg-neutral-100 p-4">
-             <Image src="https://acefence1961.com/wp-content/uploads/2024/05/image-1-1.jpg" alt="Koľajnicová brána" fill className="object-cover grayscale hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
+            <ScrollColorImage src="https://acefence1961.com/wp-content/uploads/2024/05/image-1-1.jpg" alt="Koľajnicová brána" referrerPolicy="no-referrer" />
           </div>
           <div className="order-1 lg:order-2">
             <span className="text-xs font-bold text-neutral-400 tracking-[0.2em] uppercase mb-4 block">Klasické & Stabilné</span>
@@ -135,7 +137,7 @@ export default function BranyPage() {
             </div>
           </div>
           <div className="relative h-[400px] w-full bg-neutral-100 p-4">
-             <Image src="https://jhrgate.com/wp-content/uploads/2024/08/32-4.jpg" alt="Krídlová brána" fill className="object-cover grayscale hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
+            <ScrollColorImage src="https://jhrgate.com/wp-content/uploads/2024/08/32-4.jpg" alt="Krídlová brána" referrerPolicy="no-referrer" />
           </div>
         </div>
       </section>
@@ -146,18 +148,12 @@ export default function BranyPage() {
            <h2 className="font-[family-name:var(--font-archivo-black)] text-3xl uppercase tracking-widest mb-16 text-black text-center">
             Galéria realizácií
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {[
-              "https://jhrgate.com/wp-content/uploads/2024/08/W9.jpg",
-              "https://jhrgate.com/wp-content/uploads/2024/08/W1.jpg",
-              "https://acefence1961.com/wp-content/uploads/2024/05/image-1-1.jpg",
-              "https://jhrgate.com/wp-content/uploads/2024/08/25-5.jpg"
-            ].map((imgSrc, i) => (
-               <div key={i} className="relative h-[400px] w-full bg-neutral-100">
-                 <Image src={imgSrc} alt={`Realizácia ${i + 1}`} fill className="object-cover grayscale hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
-               </div>
-            ))}
-          </div>
+          <GallerySlider images={[
+            "https://jhrgate.com/wp-content/uploads/2024/08/W9.jpg",
+            "https://jhrgate.com/wp-content/uploads/2024/08/W1.jpg",
+            "https://acefence1961.com/wp-content/uploads/2024/05/image-1-1.jpg",
+            "https://jhrgate.com/wp-content/uploads/2024/08/25-5.jpg"
+          ]} />
         </div>
       </section>
 
