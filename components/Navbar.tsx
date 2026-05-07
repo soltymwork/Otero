@@ -8,9 +8,7 @@ export default function Navbar() {
         href="/" 
         className="pointer-events-auto flex items-center gap-4 text-white hover:text-white/70 transition-colors"
       >
-        <div className="w-10 h-10 border border-white/30 rounded-full flex items-center justify-center backdrop-blur-sm bg-black/20">
-          <ArrowLeft size={16} />
-        </div>
+        <ArrowLeft size={20} strokeWidth={1.5} />
         <span className="text-xs font-bold tracking-[0.2em] uppercase">Späť na úvod</span>
       </Link>
     </nav>
