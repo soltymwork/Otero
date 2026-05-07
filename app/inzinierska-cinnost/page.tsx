@@ -38,7 +38,7 @@ export default function InzinierskaCinnostPage() {
       {/* Services Section */}
       <section id="sluzby" className="py-24 px-6 md:px-12 max-w-7xl mx-auto space-y-16">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold uppercase tracking-widest text-white">
+          <h2 className="font-[family-name:var(--font-archivo-black)] text-3xl uppercase tracking-widest text-white">
             Naše odborné služby
           </h2>
           <p className="text-white/60 font-light mt-6 max-w-2xl mx-auto leading-relaxed">
@@ -52,7 +52,7 @@ export default function InzinierskaCinnostPage() {
             <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center mb-6">
               <PencilRuler className="text-white" size={24} />
             </div>
-            <h3 className="text-xl font-bold uppercase tracking-widest mb-4 text-white">Projektová dokumentácia</h3>
+            <h3 className="font-[family-name:var(--font-archivo-black)] text-xl uppercase tracking-widest mb-4 text-white">Projektová dokumentácia</h3>
             <p className="text-white/60 font-light leading-relaxed mb-6 h-auto md:h-24">
               Vypracovanie dokumentácie pre územné rozhodnutie, stavebné povolenie aj realizačné projekty "na kľúč".
             </p>
@@ -68,7 +68,7 @@ export default function InzinierskaCinnostPage() {
             <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center mb-6">
               <FileText className="text-white" size={24} />
             </div>
-            <h3 className="text-xl font-bold uppercase tracking-widest mb-4 text-white">Inžinierska činnosť</h3>
+            <h3 className="font-[family-name:var(--font-archivo-black)] text-xl uppercase tracking-widest mb-4 text-white">Inžinierska činnosť</h3>
             <p className="text-white/60 font-light leading-relaxed mb-6 h-auto md:h-24">
               Zastupovanie pred orgánmi štátnej správy a dotknutými orgánmi v celom procese schvaľovania.
             </p>
@@ -84,7 +84,7 @@ export default function InzinierskaCinnostPage() {
             <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center mb-6">
               <Gavel className="text-white" size={24} />
             </div>
-            <h3 className="text-xl font-bold uppercase tracking-widest mb-4 text-white">Legalizácia stavieb</h3>
+            <h3 className="font-[family-name:var(--font-archivo-black)] text-xl uppercase tracking-widest mb-4 text-white">Legalizácia stavieb</h3>
             <p className="text-white/60 font-light leading-relaxed mb-6 h-auto md:h-24">
               Pomôžeme vám s dodatočným povolením stavieb a riešením nezrovnalostí v katastri nehnuteľností.
             </p>
@@ -100,7 +100,7 @@ export default function InzinierskaCinnostPage() {
             <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center mb-6">
               <Home className="text-white" size={24} />
             </div>
-            <h3 className="text-xl font-bold uppercase tracking-widest mb-4 text-white">Jednoduché stavby</h3>
+            <h3 className="font-[family-name:var(--font-archivo-black)] text-xl uppercase tracking-widest mb-4 text-white">Jednoduché stavby</h3>
             <p className="text-white/60 font-light leading-relaxed mb-6 h-auto md:h-24">
               Vybavenie ohlásenia drobných a jednoduchých stavieb, garáží, oplotenia alebo altánkov.
             </p>
@@ -116,7 +116,7 @@ export default function InzinierskaCinnostPage() {
             <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center mb-6">
               <Search className="text-white" size={24} />
             </div>
-            <h3 className="text-xl font-bold uppercase tracking-widest mb-4 text-white">Stavebný zámer</h3>
+            <h3 className="font-[family-name:var(--font-archivo-black)] text-xl uppercase tracking-widest mb-4 text-white">Stavebný zámer</h3>
             <p className="text-white/60 font-light leading-relaxed mb-6 h-auto md:h-24">
               Odborné posúdenie vášho investičného zámeru z hľadiska územného plánu a technických noriem.
             </p>
@@ -132,7 +132,7 @@ export default function InzinierskaCinnostPage() {
             <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center mb-6">
               <Key className="text-white" size={24} />
             </div>
-            <h3 className="text-xl font-bold uppercase tracking-widest mb-4 text-white">Projekty na kľúč</h3>
+            <h3 className="font-[family-name:var(--font-archivo-black)] text-xl uppercase tracking-widest mb-4 text-white">Projekty na kľúč</h3>
             <p className="text-white/60 font-light leading-relaxed mb-6 h-auto md:h-24">
               Kompletné prevzatie zodpovednosti za celý projekt od A po Z, aby ste ušetrili čas.
             </p>
@@ -157,12 +157,12 @@ export default function InzinierskaCinnostPage() {
           />
         </div>
         <div className="order-1 lg:order-2">
-          <h2 className="text-3xl font-bold uppercase tracking-widest mb-12 text-white">
+          <h2 className="font-[family-name:var(--font-archivo-black)] text-3xl uppercase tracking-widest mb-12 text-white">
             Prečo si vybrať<br/>OTERO Project?
           </h2>
           <div className="space-y-12">
             <div>
-              <h3 className="text-xl font-bold uppercase tracking-widest mb-4 text-white flex items-center gap-4">
+              <h3 className="font-[family-name:var(--font-archivo-black)] text-xl uppercase tracking-widest mb-4 text-white flex items-center gap-4">
                 <Shield className="w-8 h-8 text-white" />
                 Právna istota
               </h3>
@@ -171,7 +171,7 @@ export default function InzinierskaCinnostPage() {
               </p>
             </div>
             <div>
-               <h3 className="text-xl font-bold uppercase tracking-widest mb-4 text-white flex items-center gap-4">
+               <h3 className="font-[family-name:var(--font-archivo-black)] text-xl uppercase tracking-widest mb-4 text-white flex items-center gap-4">
                 <Clock className="w-8 h-8 text-white" />
                 Dodržiavanie termínov
               </h3>
@@ -180,7 +180,7 @@ export default function InzinierskaCinnostPage() {
               </p>
             </div>
             <div>
-               <h3 className="text-xl font-bold uppercase tracking-widest mb-4 text-white flex items-center gap-4">
+               <h3 className="font-[family-name:var(--font-archivo-black)] text-xl uppercase tracking-widest mb-4 text-white flex items-center gap-4">
                 <Users className="w-8 h-8 text-white" />
                 Individuálny prístup
               </h3>
@@ -196,7 +196,7 @@ export default function InzinierskaCinnostPage() {
       <section id="kontakt" className="py-24 border-t border-white/10 px-6">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 justify-between">
           <div className="lg:w-1/2">
-             <h2 className="text-3xl font-bold uppercase tracking-widest mb-6 text-white">
+             <h2 className="font-[family-name:var(--font-archivo-black)] text-3xl uppercase tracking-widest mb-6 text-white">
               Kontaktujte nás
             </h2>
             <div className="mb-8 space-y-6">

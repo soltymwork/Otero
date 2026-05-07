@@ -34,7 +34,7 @@ export default function BranyPage() {
 
       {/* Prečo si vybrať hliník? */}
       <section id="vyhody" className="py-24 px-6 md:px-12 max-w-7xl mx-auto border-b border-neutral-100">
-        <h2 className="text-3xl font-bold uppercase tracking-widest mb-16 text-black text-center">
+        <h2 className="font-[family-name:var(--font-archivo-black)] text-3xl uppercase tracking-widest mb-16 text-black text-center">
           Prečo si vybrať hliník?
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16 text-center">
@@ -42,7 +42,7 @@ export default function BranyPage() {
             <div className="w-16 h-16 rounded-full bg-neutral-50 flex items-center justify-center mb-6 border border-neutral-100">
               <Clock className="text-black" size={24} />
             </div>
-            <h3 className="text-xl font-bold uppercase tracking-widest mb-4 text-black">Bezúdržbovosť</h3>
+            <h3 className="font-[family-name:var(--font-archivo-black)] text-xl uppercase tracking-widest mb-4 text-black">Bezúdržbovosť</h3>
             <p className="text-neutral-600 font-light leading-relaxed">
               Zabudnite na brúsenie a natieranie. Hliník nehrdzavie a zachováva si farbu desiatky rokov.
             </p>
@@ -51,7 +51,7 @@ export default function BranyPage() {
             <div className="w-16 h-16 rounded-full bg-neutral-50 flex items-center justify-center mb-6 border border-neutral-100">
               <Palette className="text-black" size={24} />
             </div>
-            <h3 className="text-xl font-bold uppercase tracking-widest mb-4 text-black">Luxusný dizajn</h3>
+            <h3 className="font-[family-name:var(--font-archivo-black)] text-xl uppercase tracking-widest mb-4 text-black">Luxusný dizajn</h3>
             <p className="text-neutral-600 font-light leading-relaxed">
               Široká škála RAL farieb a moderné tvary, ktoré dokonale doplnia architektúru vašej novostavby.
             </p>
@@ -60,7 +60,7 @@ export default function BranyPage() {
             <div className="w-16 h-16 rounded-full bg-neutral-50 flex items-center justify-center mb-6 border border-neutral-100">
               <Weight className="text-black" size={24} />
             </div>
-            <h3 className="text-xl font-bold uppercase tracking-widest mb-4 text-black">Nízka váha</h3>
+            <h3 className="font-[family-name:var(--font-archivo-black)] text-xl uppercase tracking-widest mb-4 text-black">Nízka váha</h3>
             <p className="text-neutral-600 font-light leading-relaxed">
               Ľahkosť materiálu šetrí motorové pohony a zaisťuje tichú a plynulú manipuláciu s bránou.
             </p>
@@ -71,7 +71,7 @@ export default function BranyPage() {
       {/* Naše riešenia */}
       <section id="produkty" className="py-24 px-6 md:px-12 max-w-7xl mx-auto space-y-32">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold uppercase tracking-widest text-black">
+          <h2 className="font-[family-name:var(--font-archivo-black)] text-3xl uppercase tracking-widest text-black">
             Naše riešenia
           </h2>
           <p className="text-neutral-500 font-light mt-4">
@@ -83,7 +83,7 @@ export default function BranyPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <span className="text-xs font-bold text-neutral-400 tracking-[0.2em] uppercase mb-4 block">Premium Line</span>
-            <h3 className="text-2xl font-bold uppercase tracking-widest mb-6 text-black">Samonosné brány</h3>
+            <h3 className="font-[family-name:var(--font-archivo-black)] text-2xl uppercase tracking-widest mb-6 text-black">Samonosné brány</h3>
             <div className="space-y-4 text-neutral-600 font-light leading-relaxed">
               <p>
                 Elegantné riešenie bez koľajnice. Brána "pláva" nad zemou, čo uľahčuje údržbu najmä v zimnom období.
@@ -106,7 +106,7 @@ export default function BranyPage() {
           </div>
           <div className="order-1 lg:order-2">
             <span className="text-xs font-bold text-neutral-400 tracking-[0.2em] uppercase mb-4 block">Klasické & Stabilné</span>
-            <h3 className="text-2xl font-bold uppercase tracking-widest mb-6 text-black">Koľajnicové brány</h3>
+            <h3 className="font-[family-name:var(--font-archivo-black)] text-2xl uppercase tracking-widest mb-6 text-black">Koľajnicové brány</h3>
             <div className="space-y-4 text-neutral-600 font-light leading-relaxed">
               <p>
                 Ideálna voľba pri nedostatku bočného priestoru. Brána sa posúva po koľajnici osadenej v úrovni terénu.
@@ -123,7 +123,7 @@ export default function BranyPage() {
          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <span className="text-xs font-bold text-neutral-400 tracking-[0.2em] uppercase mb-4 block">Tradičný Dizajn</span>
-            <h3 className="text-2xl font-bold uppercase tracking-widest mb-6 text-black">Krídlové brány</h3>
+            <h3 className="font-[family-name:var(--font-archivo-black)] text-2xl uppercase tracking-widest mb-6 text-black">Krídlové brány</h3>
             <div className="space-y-4 text-neutral-600 font-light leading-relaxed">
               <p>
                 Klasické otváranie v modernom hliníkovom prevedení. Vhodné pre pozemky s dostatočným priestorom vo dvore.
@@ -143,7 +143,7 @@ export default function BranyPage() {
       {/* Galéria */}
       <section id="galeria" className="py-24 bg-white px-6 md:px-12 border-t border-neutral-100">
         <div className="max-w-7xl mx-auto">
-           <h2 className="text-3xl font-bold uppercase tracking-widest mb-16 text-black text-center">
+           <h2 className="font-[family-name:var(--font-archivo-black)] text-3xl uppercase tracking-widest mb-16 text-black text-center">
             Galéria realizácií
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -165,7 +165,7 @@ export default function BranyPage() {
       <section id="kontakt" className="py-24 bg-neutral-50 px-6 border-t border-neutral-100">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 justify-between">
           <div className="lg:w-1/2">
-             <h2 className="text-3xl font-bold uppercase tracking-widest mb-6 text-black">
+             <h2 className="font-[family-name:var(--font-archivo-black)] text-3xl uppercase tracking-widest mb-6 text-black">
               Kontakt
             </h2>
             <div className="mb-8 space-y-6">
