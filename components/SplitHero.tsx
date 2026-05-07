@@ -8,21 +8,24 @@ import Image from 'next/image';
 export default function SplitHero() {
   const [hoveredSide, setHoveredSide] = useState<'left' | 'right' | null>(null);
 
+  const transition = { duration: 0.8, ease: [0.4, 0, 0.2, 1] } as const;
+
   return (
     <div className="h-screen w-full bg-white p-4 md:p-6 flex">
 
-      {/* Ľavý panel */}
+      {/* Ľavý panel — animovaná šírka */}
       <motion.div
-        className="relative overflow-hidden h-full"
+        className="relative overflow-hidden h-full flex-none"
         animate={{ width: hoveredSide === 'left' ? '65%' : hoveredSide === 'right' ? '35%' : '50%' }}
-        transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
+        transition={transition}
         onMouseEnter={() => setHoveredSide('left')}
         onMouseLeave={() => setHoveredSide(null)}
       >
+        {/* Obrázok je širší ako panel — pri posune x nevznikne medzera */}
         <motion.div
-          className="absolute inset-0"
-          animate={{ x: hoveredSide === 'left' ? -12 : hoveredSide === 'right' ? 12 : 0, scale: 1 }}
-          transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
+          className="absolute inset-y-0 -left-10 -right-10"
+          animate={{ x: hoveredSide === 'left' ? -14 : hoveredSide === 'right' ? 14 : 0 }}
+          transition={transition}
         >
           <Image
             src="https://jhrgate.com/wp-content/uploads/2024/08/94.jpg"
@@ -57,18 +60,16 @@ export default function SplitHero() {
         </Link>
       </motion.div>
 
-      {/* Pravý panel */}
-      <motion.div
-        className="relative overflow-hidden h-full"
-        animate={{ width: hoveredSide === 'right' ? '65%' : hoveredSide === 'left' ? '35%' : '50%' }}
-        transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
+      {/* Pravý panel — flex-1 automaticky vypĺňa zvyšok, žiadna medzera */}
+      <div
+        className="relative overflow-hidden h-full flex-1"
         onMouseEnter={() => setHoveredSide('right')}
         onMouseLeave={() => setHoveredSide(null)}
       >
         <motion.div
-          className="absolute inset-0"
-          animate={{ x: hoveredSide === 'right' ? 12 : hoveredSide === 'left' ? -12 : 0, scale: 1 }}
-          transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
+          className="absolute inset-y-0 -left-10 -right-10"
+          animate={{ x: hoveredSide === 'right' ? 14 : hoveredSide === 'left' ? -14 : 0 }}
+          transition={transition}
         >
           <Image
             src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1920&auto=format&fit=crop"
@@ -101,7 +102,7 @@ export default function SplitHero() {
             </motion.p>
           </motion.div>
         </Link>
-      </motion.div>
+      </div>
 
     </div>
   );
