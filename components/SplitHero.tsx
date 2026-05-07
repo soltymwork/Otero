@@ -27,10 +27,12 @@ export default function SplitHero() {
             alt="Hliníkové brány"
             fill
             priority
-            className="object-cover transition-opacity duration-700"
+            className="object-cover"
             style={{
               filter: hoveredSide === 'right' ? 'grayscale(100%)' : 'grayscale(0%)',
-              opacity: hoveredSide === 'right' ? 0.4 : 0.8
+              opacity: hoveredSide === 'right' ? 0.4 : 0.8,
+              transition: 'opacity 0.7s, filter 0.7s',
+              transform: 'none',
             }}
           />
         </div>
@@ -88,10 +90,12 @@ export default function SplitHero() {
             alt="Inžinierska činnosť"
             fill
             priority
-            className="object-cover transition-opacity duration-700"
+            className="object-cover"
             style={{
               filter: hoveredSide === 'left' ? 'grayscale(100%)' : 'grayscale(0%)',
-              opacity: hoveredSide === 'left' ? 0.4 : 0.8
+              opacity: hoveredSide === 'left' ? 0.4 : 0.8,
+              transition: 'opacity 0.7s, filter 0.7s',
+              transform: 'none',
             }}
           />
         </div>
