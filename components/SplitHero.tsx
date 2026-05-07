@@ -13,11 +13,13 @@ export default function SplitHero() {
   return (
     <div className="h-screen w-full bg-white p-4 md:p-6 flex">
 
-      {/* Ľavý panel — animovaná šírka */}
-      <motion.div
+      {/* Ľavý panel — CSS transition namiesto motion (rovnaký prístup ako pravý) */}
+      <div
         className="relative overflow-hidden h-full flex-none"
-        animate={{ width: hoveredSide === 'left' ? '65%' : hoveredSide === 'right' ? '35%' : '50%' }}
-        transition={transition}
+        style={{
+          width: hoveredSide === 'left' ? '65%' : hoveredSide === 'right' ? '35%' : '50%',
+          transition: 'width 0.8s cubic-bezier(0.4, 0, 0.2, 1)',
+        }}
         onMouseEnter={() => setHoveredSide('left')}
         onMouseLeave={() => setHoveredSide(null)}
       >
