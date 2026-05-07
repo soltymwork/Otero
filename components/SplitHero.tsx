@@ -60,7 +60,7 @@ export default function SplitHero() {
             </motion.p>
           </motion.div>
         </Link>
-      </motion.div>
+      </div>
 
       {/* Pravý panel — flex-1 automaticky vypĺňa zvyšok, žiadna medzera */}
       <div
