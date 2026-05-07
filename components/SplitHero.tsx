@@ -19,7 +19,7 @@ export default function SplitHero() {
         animate={{
           width: hoveredSide === 'left' ? '70%' : hoveredSide === 'right' ? '30%' : '50%',
         }}
-        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.9, ease: [0.4, 0, 0.2, 1] }}
       >
         <div className="absolute inset-0 z-0">
           <Image
@@ -80,7 +80,7 @@ export default function SplitHero() {
         animate={{
           width: hoveredSide === 'right' ? '70%' : hoveredSide === 'left' ? '30%' : '50%',
         }}
-        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.9, ease: [0.4, 0, 0.2, 1] }}
       >
          <div className="absolute inset-0 z-0">
           <Image
