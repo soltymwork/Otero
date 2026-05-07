@@ -13,7 +13,7 @@ export default function SplitHero() {
   return (
     <div className="h-screen w-full bg-white p-4 md:p-6 flex">
 
-      {/* Ľavý panel — CSS transition namiesto motion (rovnaký prístup ako pravý) */}
+      {/* Ľavý panel */}
       <div
         className="relative overflow-hidden h-full flex-none"
         style={{
@@ -23,9 +23,10 @@ export default function SplitHero() {
         onMouseEnter={() => setHoveredSide('left')}
         onMouseLeave={() => setHoveredSide(null)}
       >
-        {/* Obrázok je širší ako panel — pri posune x nevznikne medzera */}
+        {/* Fixná šírka 100vw — panel len oreže, image sa nikdy nezväčšuje */}
         <motion.div
-          className="absolute inset-y-0 -left-10 -right-10"
+          className="absolute inset-y-0 left-0"
+          style={{ width: '100vw' }}
           animate={{ x: hoveredSide === 'left' ? -14 : hoveredSide === 'right' ? 14 : 0 }}
           transition={transition}
         >
@@ -62,14 +63,16 @@ export default function SplitHero() {
         </Link>
       </div>
 
-      {/* Pravý panel — flex-1 automaticky vypĺňa zvyšok, žiadna medzera */}
+      {/* Pravý panel */}
       <div
         className="relative overflow-hidden h-full flex-1"
         onMouseEnter={() => setHoveredSide('right')}
         onMouseLeave={() => setHoveredSide(null)}
       >
+        {/* Fixná šírka 100vw zakotvená vpravo */}
         <motion.div
-          className="absolute inset-y-0 -left-10 -right-10"
+          className="absolute inset-y-0 right-0"
+          style={{ width: '100vw' }}
           animate={{ x: hoveredSide === 'right' ? 14 : hoveredSide === 'left' ? -14 : 0 }}
           transition={transition}
         >
