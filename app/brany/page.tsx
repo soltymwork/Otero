@@ -31,6 +31,14 @@ export default function BranyPage() {
           <p className="text-sm md:text-base text-white md:text-neutral-950 tracking-widest font-bold uppercase max-w-3xl mx-auto leading-relaxed [text-shadow:0_1px_6px_rgba(0,0,0,0.6)]">
             Prvotriedne hliníkové brány a oplotenia na mieru s doživotnou odolnosťou voči korózii a nadčasovým dizajnom.
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+            <a href="#kontakt" className="bg-white text-black px-8 py-3 text-xs font-bold tracking-[0.2em] uppercase hover:bg-black hover:text-white transition-colors">
+              Bezplatná konzultácia
+            </a>
+            <a href="#kontakt" className="border border-white text-white px-8 py-3 text-xs font-bold tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-colors md:border-black md:text-black md:hover:bg-black md:hover:text-white">
+              Cenová ponuka
+            </a>
+          </div>
         </div>
       </section>
 
