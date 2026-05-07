@@ -20,23 +20,22 @@ export default function SplitHero() {
   const imgTransition = { duration: 1.2, ease: [0.25, 0.1, 0.25, 1] } as const;
   const modalTransition = { duration: 0.6 } as const;
 
-  const leftWidth = isDesktop
-    ? (hoveredSide === 'left' ? '60%' : hoveredSide === 'right' ? '40%' : '50%')
-    : undefined;
-
   return (
     <div className="h-screen w-full bg-white p-4 md:p-6 flex flex-col md:flex-row">
 
       {/* Ľavý / Horný panel */}
       <div
         className="relative overflow-hidden flex-1 md:flex-none"
-        style={{ width: leftWidth, transition: 'width 1.2s cubic-bezier(0.25, 0.1, 0.25, 1)' }}
+        style={{
+          width: isDesktop ? (hoveredSide === 'left' ? '60%' : hoveredSide === 'right' ? '40%' : '50%') : undefined,
+          transition: 'width 1.2s cubic-bezier(0.25, 0.1, 0.25, 1)',
+        }}
         onMouseEnter={() => setHoveredSide('left')}
         onMouseLeave={() => setHoveredSide(null)}
       >
         <motion.div
-          className="absolute inset-0 md:inset-y-0 md:left-0"
-          style={{ width: '100%' }}
+          className="absolute inset-y-0 left-0"
+          style={{ width: '100vw' }}
           animate={{ x: hoveredSide === 'left' ? -10 : hoveredSide === 'right' ? 10 : 0 }}
           transition={imgTransition}
         >
@@ -84,8 +83,8 @@ export default function SplitHero() {
         onMouseLeave={() => setHoveredSide(null)}
       >
         <motion.div
-          className="absolute inset-0 md:inset-y-0 md:right-0"
-          style={{ width: '100%' }}
+          className="absolute inset-y-0 right-0"
+          style={{ width: '100vw' }}
           animate={{ x: hoveredSide === 'right' ? 10 : hoveredSide === 'left' ? -10 : 0 }}
           transition={imgTransition}
         >
