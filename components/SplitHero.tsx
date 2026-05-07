@@ -21,11 +21,11 @@ export default function SplitHero() {
   const modalTransition = { duration: 0.6 } as const;
 
   return (
-    <div className="h-screen w-full bg-white p-4 md:p-6 flex flex-col md:flex-row gap-1 md:gap-0">
+    <div className="w-full bg-white p-4 md:p-6 flex flex-col md:flex-row md:h-screen">
 
       {/* Ľavý / Horný panel */}
       <div
-        className="relative overflow-hidden flex-1 md:flex-none"
+        className="relative overflow-hidden h-[47vh] md:h-full md:flex-none"
         style={{
           width: isDesktop ? (hoveredSide === 'left' ? '60%' : hoveredSide === 'right' ? '40%' : '50%') : undefined,
           transition: 'width 1.2s cubic-bezier(0.25, 0.1, 0.25, 1)',
@@ -78,7 +78,7 @@ export default function SplitHero() {
 
       {/* Pravý / Dolný panel */}
       <div
-        className="relative overflow-hidden flex-1"
+        className="relative overflow-hidden h-[47vh] md:h-full md:flex-1"
         onMouseEnter={() => setHoveredSide('right')}
         onMouseLeave={() => setHoveredSide(null)}
       >
