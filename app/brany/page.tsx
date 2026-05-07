@@ -7,10 +7,9 @@ import { Check, Clock, Palette, Weight } from 'lucide-react';
 export default function BranyPage() {
   return (
     <main className="min-h-screen bg-white">
-      <NavbarBrany />
-
       {/* Hero Section */}
       <section id="domov" className="relative h-[70vh] w-full flex items-center justify-center overflow-hidden">
+        <NavbarBrany />
         <div className="absolute inset-0 z-0">
           <Image 
             src="https://jhrgate.com/wp-content/uploads/2024/08/94.jpg"

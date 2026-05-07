@@ -8,10 +8,9 @@ import StatsSection from '@/components/StatsSection';
 export default function InzinierskaCinnostPage() {
   return (
     <main className="min-h-screen bg-black text-white/85 selection:bg-white selection:text-black">
-      <NavbarInzinierska />
-
       {/* Hero Section */}
       <section id="domov" className="relative h-[70vh] w-full flex items-center justify-center overflow-hidden">
+        <NavbarInzinierska />
         <div className="absolute inset-0 z-0">
           <Image 
             src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1920&auto=format&fit=crop"
