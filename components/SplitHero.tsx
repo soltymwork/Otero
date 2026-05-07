@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -8,23 +8,29 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 export default function SplitHero() {
   const [hoveredSide, setHoveredSide] = useState<'left' | 'right' | null>(null);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsDesktop(window.innerWidth >= 768);
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
 
   const imgTransition = { duration: 1.2, ease: [0.25, 0.1, 0.25, 1] } as const;
   const modalTransition = { duration: 0.6 } as const;
 
+  const leftWidth = isDesktop
+    ? (hoveredSide === 'left' ? '60%' : hoveredSide === 'right' ? '40%' : '50%')
+    : undefined;
+
   return (
-    {/* Mobile: pod sebou, Desktop: vedľa seba */}
     <div className="h-screen w-full bg-white p-4 md:p-6 flex flex-col md:flex-row">
 
       {/* Ľavý / Horný panel */}
       <div
         className="relative overflow-hidden flex-1 md:flex-none"
-        style={{
-          width: typeof window !== 'undefined' && window.innerWidth >= 768
-            ? (hoveredSide === 'left' ? '60%' : hoveredSide === 'right' ? '40%' : '50%')
-            : undefined,
-          transition: 'width 1.2s cubic-bezier(0.25, 0.1, 0.25, 1)',
-        }}
+        style={{ width: leftWidth, transition: 'width 1.2s cubic-bezier(0.25, 0.1, 0.25, 1)' }}
         onMouseEnter={() => setHoveredSide('left')}
         onMouseLeave={() => setHoveredSide(null)}
       >
