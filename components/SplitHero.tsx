@@ -13,21 +13,24 @@ export default function SplitHero() {
   const modalTransition = { duration: 0.6 } as const;
 
   return (
-    <div className="h-screen w-full bg-white p-4 md:p-6 flex">
+    {/* Mobile: pod sebou, Desktop: vedľa seba */}
+    <div className="h-screen w-full bg-white p-4 md:p-6 flex flex-col md:flex-row">
 
-      {/* Ľavý panel */}
+      {/* Ľavý / Horný panel */}
       <div
-        className="relative overflow-hidden h-full flex-none"
+        className="relative overflow-hidden flex-1 md:flex-none"
         style={{
-          width: hoveredSide === 'left' ? '60%' : hoveredSide === 'right' ? '40%' : '50%',
+          width: typeof window !== 'undefined' && window.innerWidth >= 768
+            ? (hoveredSide === 'left' ? '60%' : hoveredSide === 'right' ? '40%' : '50%')
+            : undefined,
           transition: 'width 1.2s cubic-bezier(0.25, 0.1, 0.25, 1)',
         }}
         onMouseEnter={() => setHoveredSide('left')}
         onMouseLeave={() => setHoveredSide(null)}
       >
         <motion.div
-          className="absolute inset-y-0 left-0"
-          style={{ width: '100vw' }}
+          className="absolute inset-0 md:inset-y-0 md:left-0"
+          style={{ width: '100%' }}
           animate={{ x: hoveredSide === 'left' ? -10 : hoveredSide === 'right' ? 10 : 0 }}
           transition={imgTransition}
         >
@@ -40,19 +43,18 @@ export default function SplitHero() {
           />
         </motion.div>
 
-        {/* Šípka vľavo — vždy viditeľná */}
-        <div className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-white">
+        <div className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-white hidden md:block">
           <ArrowLeft size={32} strokeWidth={1} />
         </div>
 
         <Link href="/brany" className="absolute inset-0 flex items-center justify-center">
           <motion.div
-            className="flex flex-col items-center justify-center text-center shadow-2xl px-10 py-7"
+            className="flex flex-col items-center justify-center text-center shadow-2xl px-8 py-6"
             animate={{ backgroundColor: hoveredSide === 'left' ? '#000000' : '#ffffff' }}
             transition={modalTransition}
           >
             <motion.h1
-              className="text-xl md:text-2xl uppercase tracking-[0.25em] leading-snug mb-2 font-bold"
+              className="text-lg md:text-2xl uppercase tracking-[0.25em] leading-snug mb-2 font-bold"
               animate={{ color: hoveredSide === 'left' ? '#ffffff' : '#000000' }}
               transition={modalTransition}
             >
@@ -69,15 +71,15 @@ export default function SplitHero() {
         </Link>
       </div>
 
-      {/* Pravý panel */}
+      {/* Pravý / Dolný panel */}
       <div
-        className="relative overflow-hidden h-full flex-1"
+        className="relative overflow-hidden flex-1"
         onMouseEnter={() => setHoveredSide('right')}
         onMouseLeave={() => setHoveredSide(null)}
       >
         <motion.div
-          className="absolute inset-y-0 right-0"
-          style={{ width: '100vw' }}
+          className="absolute inset-0 md:inset-y-0 md:right-0"
+          style={{ width: '100%' }}
           animate={{ x: hoveredSide === 'right' ? 10 : hoveredSide === 'left' ? -10 : 0 }}
           transition={imgTransition}
         >
@@ -90,19 +92,18 @@ export default function SplitHero() {
           />
         </motion.div>
 
-        {/* Šípka vpravo — vždy viditeľná */}
-        <div className="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-white">
+        <div className="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-white hidden md:block">
           <ArrowRight size={32} strokeWidth={1} />
         </div>
 
         <Link href="/inzinierska-cinnost" className="absolute inset-0 flex items-center justify-center">
           <motion.div
-            className="rounded-full w-[220px] h-[220px] md:w-[270px] md:h-[270px] flex flex-col items-center justify-center text-center shadow-2xl px-6"
+            className="rounded-full w-[180px] h-[180px] md:w-[270px] md:h-[270px] flex flex-col items-center justify-center text-center shadow-2xl px-6"
             animate={{ backgroundColor: hoveredSide === 'right' ? '#ffffff' : '#000000' }}
             transition={modalTransition}
           >
             <motion.h1
-              className="text-base md:text-xl uppercase tracking-[0.2em] leading-snug mb-2 font-bold"
+              className="text-sm md:text-xl uppercase tracking-[0.2em] leading-snug mb-2 font-bold"
               animate={{ color: hoveredSide === 'right' ? '#000000' : '#ffffff' }}
               transition={modalTransition}
             >
