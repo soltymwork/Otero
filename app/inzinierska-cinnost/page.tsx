@@ -3,6 +3,7 @@ import Navbar from '@/components/Navbar';
 import ContactForm from '@/components/ContactForm';
 import Footer from '@/components/Footer';
 import { PencilRuler, FileText, Gavel, Home, Search, Key, Shield, Clock, Users, Check } from 'lucide-react';
+import StatsSection from '@/components/StatsSection';
 
 export default function InzinierskaCinnostPage() {
   return (
@@ -24,7 +25,7 @@ export default function InzinierskaCinnostPage() {
         </div>
         
         <div className="relative z-10 text-center px-4 max-w-5xl mx-auto mt-16">
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white uppercase tracking-[0.2em] mb-6 [text-shadow:0_0_30px_rgba(255,255,255,0.6)]">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white uppercase tracking-[0.2em] mb-6 [text-shadow:0_0_30px_rgba(255,255,255,0.6)]">
             Komplexná inžinierska činnosť<br />pre váš stavebný zámer
           </h1>
           <p className="text-sm md:text-base text-white/80 tracking-widest font-light uppercase max-w-3xl mx-auto leading-relaxed">
@@ -33,27 +34,7 @@ export default function InzinierskaCinnostPage() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 px-6 border-b border-white/10 bg-[#111111]">
-        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-white/10 overflow-hidden">
-          <div className="flex flex-col items-center justify-center">
-            <span className="text-4xl lg:text-5xl font-bold text-white mb-2 tracking-wider">100+</span>
-            <span className="text-xs text-white/50 tracking-[0.2em] uppercase font-bold">PROJEKTOV</span>
-          </div>
-          <div className="flex flex-col items-center justify-center">
-            <span className="text-4xl lg:text-5xl font-bold text-white mb-2 tracking-wider">10+</span>
-            <span className="text-xs text-white/50 tracking-[0.2em] uppercase font-bold">ROKOV PRAXE</span>
-          </div>
-          <div className="flex flex-col items-center justify-center">
-            <span className="text-4xl lg:text-5xl font-bold text-white mb-2 tracking-wider">100%</span>
-            <span className="text-xs text-white/50 tracking-[0.2em] uppercase font-bold">LEGALIZÁCIÍ</span>
-          </div>
-          <div className="flex flex-col items-center justify-center">
-            <span className="text-4xl lg:text-5xl font-bold text-white mb-2 tracking-wider">24h</span>
-            <span className="text-xs text-white/50 tracking-[0.2em] uppercase font-bold">ODOZVA</span>
-          </div>
-        </div>
-      </section>
+      <StatsSection />
 
       {/* Services Section */}
       <section className="py-24 px-6 md:px-12 max-w-7xl mx-auto space-y-16">
