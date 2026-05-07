@@ -10,7 +10,7 @@ export default function SplitHero() {
   const [hoveredSide, setHoveredSide] = useState<'left' | 'right' | null>(null);
 
   return (
-    <div className="flex h-screen w-full bg-black text-white selection:bg-white selection:text-black p-4 md:p-6 gap-3 md:gap-4">
+    <div className="flex h-screen w-full bg-white text-white selection:bg-white selection:text-black p-4 md:p-6">
       {/* Left Side - Hliníkové brány */}
       <motion.div
         className="relative flex h-full cursor-pointer flex-col items-center justify-center overflow-hidden rounded-sm"
@@ -37,21 +37,21 @@ export default function SplitHero() {
 
         <Link href="/brany" className="relative z-10 flex flex-col items-center justify-center group w-full h-full">
            <motion.div
-             className="px-10 py-8 flex flex-col items-center justify-center font-bold tracking-[0.2em] text-center shadow-2xl"
+             className="w-[220px] md:w-[280px] py-7 px-6 flex flex-col items-center justify-center font-bold tracking-[0.2em] text-center shadow-2xl"
              animate={{
                backgroundColor: hoveredSide === 'left' ? '#000000' : '#ffffff',
              }}
              transition={{ duration: 0.4 }}
            >
               <motion.h1
-                className="text-2xl md:text-4xl uppercase mb-3 tracking-[0.3em]"
+                className="text-lg md:text-2xl uppercase mb-2 tracking-[0.25em] leading-snug"
                 animate={{ color: hoveredSide === 'left' ? '#ffffff' : '#000000' }}
                 transition={{ duration: 0.4 }}
               >
                 Hliníkové Brány
               </motion.h1>
               <motion.p
-                className="text-xs tracking-[0.4em] font-medium"
+                className="text-[10px] tracking-[0.4em] font-medium"
                 animate={{ color: hoveredSide === 'left' ? '#ffffff' : '#000000' }}
                 transition={{ duration: 0.4 }}
               >
@@ -98,21 +98,21 @@ export default function SplitHero() {
 
         <Link href="/inzinierska-cinnost" className="relative z-10 flex flex-col items-center justify-center group w-full h-full">
            <motion.div
-             className="rounded-full w-[260px] h-[260px] md:w-[340px] md:h-[340px] flex flex-col items-center justify-center font-bold tracking-[0.2em] text-center shadow-2xl"
+             className="rounded-full w-[220px] h-[220px] md:w-[280px] md:h-[280px] flex flex-col items-center justify-center font-bold tracking-[0.2em] text-center shadow-2xl px-6"
              animate={{
                backgroundColor: hoveredSide === 'right' ? '#ffffff' : '#000000',
              }}
              transition={{ duration: 0.4 }}
            >
               <motion.h1
-                className="text-2xl md:text-4xl uppercase mb-3 tracking-[0.3em] leading-tight text-center"
+                className="text-base md:text-xl uppercase mb-2 tracking-[0.2em] leading-snug text-center"
                 animate={{ color: hoveredSide === 'right' ? '#000000' : '#ffffff' }}
                 transition={{ duration: 0.4 }}
               >
                 Inžinierska<br/>Činnosť
               </motion.h1>
               <motion.p
-                className="text-xs tracking-[0.4em] font-medium"
+                className="text-[10px] tracking-[0.4em] font-medium"
                 animate={{ color: hoveredSide === 'right' ? '#000000' : '#ffffff' }}
                 transition={{ duration: 0.4 }}
               >
