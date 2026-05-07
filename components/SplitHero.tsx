@@ -4,11 +4,13 @@ import { useState } from 'react';
 import { motion } from 'motion/react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 export default function SplitHero() {
   const [hoveredSide, setHoveredSide] = useState<'left' | 'right' | null>(null);
 
-  const transition = { duration: 0.8, ease: [0.4, 0, 0.2, 1] } as const;
+  const imgTransition = { duration: 1.2, ease: [0.25, 0.1, 0.25, 1] } as const;
+  const modalTransition = { duration: 0.6 } as const;
 
   return (
     <div className="h-screen w-full bg-white p-4 md:p-6 flex">
@@ -17,18 +19,17 @@ export default function SplitHero() {
       <div
         className="relative overflow-hidden h-full flex-none"
         style={{
-          width: hoveredSide === 'left' ? '65%' : hoveredSide === 'right' ? '35%' : '50%',
-          transition: 'width 0.8s cubic-bezier(0.4, 0, 0.2, 1)',
+          width: hoveredSide === 'left' ? '60%' : hoveredSide === 'right' ? '40%' : '50%',
+          transition: 'width 1.2s cubic-bezier(0.25, 0.1, 0.25, 1)',
         }}
         onMouseEnter={() => setHoveredSide('left')}
         onMouseLeave={() => setHoveredSide(null)}
       >
-        {/* Fixná šírka 100vw — panel len oreže, image sa nikdy nezväčšuje */}
         <motion.div
           className="absolute inset-y-0 left-0"
           style={{ width: '100vw' }}
-          animate={{ x: hoveredSide === 'left' ? -14 : hoveredSide === 'right' ? 14 : 0 }}
-          transition={transition}
+          animate={{ x: hoveredSide === 'left' ? -10 : hoveredSide === 'right' ? 10 : 0 }}
+          transition={imgTransition}
         >
           <Image
             src="https://jhrgate.com/wp-content/uploads/2024/08/94.jpg"
@@ -39,23 +40,28 @@ export default function SplitHero() {
           />
         </motion.div>
 
+        {/* Šípka vľavo — vždy viditeľná */}
+        <div className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-white">
+          <ArrowLeft size={32} strokeWidth={1} />
+        </div>
+
         <Link href="/brany" className="absolute inset-0 flex items-center justify-center">
           <motion.div
             className="flex flex-col items-center justify-center text-center shadow-2xl px-10 py-7"
             animate={{ backgroundColor: hoveredSide === 'left' ? '#000000' : '#ffffff' }}
-            transition={{ duration: 0.4 }}
+            transition={modalTransition}
           >
             <motion.h1
               className="text-xl md:text-2xl uppercase tracking-[0.25em] leading-snug mb-2 font-bold"
               animate={{ color: hoveredSide === 'left' ? '#ffffff' : '#000000' }}
-              transition={{ duration: 0.4 }}
+              transition={modalTransition}
             >
               Hliníkové Brány
             </motion.h1>
             <motion.p
               className="text-[10px] tracking-[0.4em] font-medium"
               animate={{ color: hoveredSide === 'left' ? '#ffffff' : '#000000' }}
-              transition={{ duration: 0.4 }}
+              transition={modalTransition}
             >
               ZISTIŤ VIAC
             </motion.p>
@@ -69,12 +75,11 @@ export default function SplitHero() {
         onMouseEnter={() => setHoveredSide('right')}
         onMouseLeave={() => setHoveredSide(null)}
       >
-        {/* Fixná šírka 100vw zakotvená vpravo */}
         <motion.div
           className="absolute inset-y-0 right-0"
           style={{ width: '100vw' }}
-          animate={{ x: hoveredSide === 'right' ? 14 : hoveredSide === 'left' ? -14 : 0 }}
-          transition={transition}
+          animate={{ x: hoveredSide === 'right' ? 10 : hoveredSide === 'left' ? -10 : 0 }}
+          transition={imgTransition}
         >
           <Image
             src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1920&auto=format&fit=crop"
@@ -85,23 +90,28 @@ export default function SplitHero() {
           />
         </motion.div>
 
+        {/* Šípka vpravo — vždy viditeľná */}
+        <div className="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-white">
+          <ArrowRight size={32} strokeWidth={1} />
+        </div>
+
         <Link href="/inzinierska-cinnost" className="absolute inset-0 flex items-center justify-center">
           <motion.div
             className="rounded-full w-[220px] h-[220px] md:w-[270px] md:h-[270px] flex flex-col items-center justify-center text-center shadow-2xl px-6"
             animate={{ backgroundColor: hoveredSide === 'right' ? '#ffffff' : '#000000' }}
-            transition={{ duration: 0.4 }}
+            transition={modalTransition}
           >
             <motion.h1
               className="text-base md:text-xl uppercase tracking-[0.2em] leading-snug mb-2 font-bold"
               animate={{ color: hoveredSide === 'right' ? '#000000' : '#ffffff' }}
-              transition={{ duration: 0.4 }}
+              transition={modalTransition}
             >
               Inžinierska<br />Činnosť
             </motion.h1>
             <motion.p
               className="text-[10px] tracking-[0.4em] font-medium"
               animate={{ color: hoveredSide === 'right' ? '#000000' : '#ffffff' }}
-              transition={{ duration: 0.4 }}
+              transition={modalTransition}
             >
               ZISTIŤ VIAC
             </motion.p>
