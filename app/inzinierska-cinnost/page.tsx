@@ -6,7 +6,7 @@ import { PencilRuler, FileText, Gavel, Home, Search, Key, Shield, Clock, Users, 
 
 export default function InzinierskaCinnostPage() {
   return (
-    <main className="min-h-screen bg-black text-white selection:bg-white selection:text-black">
+    <main className="min-h-screen bg-[#111111] text-white selection:bg-white selection:text-black">
       <Navbar />
       
       {/* Hero Section */}
@@ -19,15 +19,13 @@ export default function InzinierskaCinnostPage() {
             priority
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-black/60" />
+          <div className="absolute inset-0 bg-black/40" />
           <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-black to-transparent" />
         </div>
         
         <div className="relative z-10 text-center px-4 max-w-5xl mx-auto mt-16">
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white uppercase tracking-[0.2em] mb-6 [text-shadow:0_0_30px_rgba(255,255,255,0.6)]">
-            KOMPLEXNÁ
-            <br />
-            INŽINIERSKA ČINNOSŤ
+            Komplexná inžinierska činnosť<br />pre váš stavebný zámer
           </h1>
           <p className="text-sm md:text-base text-white/80 tracking-widest font-light uppercase max-w-3xl mx-auto leading-relaxed">
             Zabezpečíme všetko od prvej skice cez projektovú dokumentáciu až po finálnu kolaudáciu. Stavajte bez stresu s profesionálmi z OTERO Project.
@@ -36,7 +34,7 @@ export default function InzinierskaCinnostPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 px-6 border-b border-white/10 bg-black">
+      <section className="py-16 px-6 border-b border-white/10 bg-[#111111]">
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-white/10 overflow-hidden">
           <div className="flex flex-col items-center justify-center">
             <span className="text-4xl lg:text-5xl font-bold text-white mb-2 tracking-wider">100+</span>
