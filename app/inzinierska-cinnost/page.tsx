@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Navbar from '@/components/Navbar';
+import NavbarInzinierska from '@/components/NavbarInzinierska';
 import ContactForm from '@/components/ContactForm';
 import Footer from '@/components/Footer';
 import { PencilRuler, FileText, Gavel, Home, Search, Key, Shield, Clock, Users, Check } from 'lucide-react';
@@ -8,10 +8,10 @@ import StatsSection from '@/components/StatsSection';
 export default function InzinierskaCinnostPage() {
   return (
     <main className="min-h-screen bg-black text-white/85 selection:bg-white selection:text-black">
-      <Navbar />
-      
+      <NavbarInzinierska />
+
       {/* Hero Section */}
-      <section className="relative h-[70vh] w-full flex items-center justify-center overflow-hidden">
+      <section id="domov" className="relative h-[70vh] w-full flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image 
             src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1920&auto=format&fit=crop"
@@ -37,7 +37,7 @@ export default function InzinierskaCinnostPage() {
       <StatsSection />
 
       {/* Services Section */}
-      <section className="py-24 px-6 md:px-12 max-w-7xl mx-auto space-y-16">
+      <section id="sluzby" className="py-24 px-6 md:px-12 max-w-7xl mx-auto space-y-16">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold uppercase tracking-widest text-white">
             Naše odborné služby
@@ -147,7 +147,7 @@ export default function InzinierskaCinnostPage() {
       </section>
 
       {/* Prečo si vybrať nás */}
-      <section className="py-24 px-6 md:px-12 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center border-t border-white/10">
+      <section id="o-nas" className="py-24 px-6 md:px-12 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center border-t border-white/10">
         <div className="order-2 lg:order-1 relative h-[500px] w-full border border-white/10 p-4">
            <Image 
             src="https://images.unsplash.com/photo-1581092583537-20d51b4b4f1b?q=80&w=800&auto=format&fit=crop"
@@ -194,7 +194,7 @@ export default function InzinierskaCinnostPage() {
       </section>
 
       {/* Form Section */}
-      <section className="py-24 border-t border-white/10 px-6">
+      <section id="kontakt" className="py-24 border-t border-white/10 px-6">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 justify-between">
           <div className="lg:w-1/2">
              <h2 className="text-3xl font-bold uppercase tracking-widest mb-6 text-white">

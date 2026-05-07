@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Navbar from '@/components/Navbar';
+import NavbarBrany from '@/components/NavbarBrany';
 import ContactForm from '@/components/ContactForm';
 import Footer from '@/components/Footer';
 import { Check, Clock, Palette, Weight } from 'lucide-react';
@@ -7,10 +7,10 @@ import { Check, Clock, Palette, Weight } from 'lucide-react';
 export default function BranyPage() {
   return (
     <main className="min-h-screen bg-white">
-      <Navbar />
-      
+      <NavbarBrany />
+
       {/* Hero Section */}
-      <section className="relative h-[70vh] w-full flex items-center justify-center overflow-hidden">
+      <section id="domov" className="relative h-[70vh] w-full flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image 
             src="https://jhrgate.com/wp-content/uploads/2024/08/94.jpg"
@@ -34,7 +34,7 @@ export default function BranyPage() {
       </section>
 
       {/* Prečo si vybrať hliník? */}
-      <section className="py-24 px-6 md:px-12 max-w-7xl mx-auto border-b border-neutral-100">
+      <section id="vyhody" className="py-24 px-6 md:px-12 max-w-7xl mx-auto border-b border-neutral-100">
         <h2 className="text-3xl font-bold uppercase tracking-widest mb-16 text-black text-center">
           Prečo si vybrať hliník?
         </h2>
@@ -70,7 +70,7 @@ export default function BranyPage() {
       </section>
 
       {/* Naše riešenia */}
-      <section className="py-24 px-6 md:px-12 max-w-7xl mx-auto space-y-32">
+      <section id="produkty" className="py-24 px-6 md:px-12 max-w-7xl mx-auto space-y-32">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold uppercase tracking-widest text-black">
             Naše riešenia
@@ -142,7 +142,7 @@ export default function BranyPage() {
       </section>
 
       {/* Galéria */}
-      <section className="py-24 bg-white px-6 md:px-12 border-t border-neutral-100">
+      <section id="galeria" className="py-24 bg-white px-6 md:px-12 border-t border-neutral-100">
         <div className="max-w-7xl mx-auto">
            <h2 className="text-3xl font-bold uppercase tracking-widest mb-16 text-black text-center">
             Galéria realizácií
@@ -163,7 +163,7 @@ export default function BranyPage() {
       </section>
 
       {/* Form Section */}
-      <section className="py-24 bg-neutral-50 px-6 border-t border-neutral-100">
+      <section id="kontakt" className="py-24 bg-neutral-50 px-6 border-t border-neutral-100">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 justify-between">
           <div className="lg:w-1/2">
              <h2 className="text-3xl font-bold uppercase tracking-widest mb-6 text-black">
