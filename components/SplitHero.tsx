@@ -21,7 +21,7 @@ export default function SplitHero() {
         }}
         transition={{ duration: 0.9, ease: [0.4, 0, 0.2, 1] }}
       >
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 overflow-hidden">
           <Image
             src="https://jhrgate.com/wp-content/uploads/2024/08/94.jpg"
             alt="Hliníkové brány"
@@ -30,9 +30,14 @@ export default function SplitHero() {
             className="object-cover"
             style={{
               filter: hoveredSide === 'right' ? 'grayscale(100%)' : 'grayscale(0%)',
-              opacity: hoveredSide === 'right' ? 0.4 : 0.8,
-              transition: 'opacity 0.7s, filter 0.7s',
-              transform: 'none',
+              opacity: hoveredSide === 'right' ? 0.4 : 1,
+              transition: 'opacity 0.7s, filter 0.7s, transform 0.9s cubic-bezier(0.4, 0, 0.2, 1)',
+              transformOrigin: 'left center',
+              transform: hoveredSide === 'left'
+                ? `scaleX(${50 / 70})`
+                : hoveredSide === 'right'
+                ? `scaleX(${50 / 30})`
+                : 'scaleX(1)',
             }}
           />
         </div>
@@ -84,7 +89,7 @@ export default function SplitHero() {
         }}
         transition={{ duration: 0.9, ease: [0.4, 0, 0.2, 1] }}
       >
-         <div className="absolute inset-0 z-0">
+         <div className="absolute inset-0 z-0 overflow-hidden">
           <Image
             src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1920&auto=format&fit=crop"
             alt="Inžinierska činnosť"
@@ -93,9 +98,14 @@ export default function SplitHero() {
             className="object-cover"
             style={{
               filter: hoveredSide === 'left' ? 'grayscale(100%)' : 'grayscale(0%)',
-              opacity: hoveredSide === 'left' ? 0.4 : 0.8,
-              transition: 'opacity 0.7s, filter 0.7s',
-              transform: 'none',
+              opacity: hoveredSide === 'left' ? 0.4 : 1,
+              transition: 'opacity 0.7s, filter 0.7s, transform 0.9s cubic-bezier(0.4, 0, 0.2, 1)',
+              transformOrigin: 'right center',
+              transform: hoveredSide === 'right'
+                ? `scaleX(${50 / 70})`
+                : hoveredSide === 'left'
+                ? `scaleX(${50 / 30})`
+                : 'scaleX(1)',
             }}
           />
         </div>
