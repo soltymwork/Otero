@@ -19,15 +19,14 @@ export default function BranyPage() {
             priority
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-black/50" />
-          <div className="absolute bottom-0 left-0 w-full h-80 bg-gradient-to-t from-white via-white/60 to-transparent" />
+          <div className="absolute inset-0 bg-white/70" />
         </div>
 
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-32">
-          <h1 className="font-[family-name:var(--font-archivo-black)] text-4xl md:text-7xl text-white uppercase tracking-[0.1em] mb-6">
+        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-16">
+          <h1 className="font-[family-name:var(--font-archivo-black)] text-4xl md:text-7xl text-neutral-900 uppercase tracking-[0.1em] mb-6">
             Elegancia<br />Otero AluGates
           </h1>
-          <p className="text-sm md:text-base text-neutral-700 tracking-widest font-light uppercase max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm md:text-base text-neutral-600 tracking-widest font-light uppercase max-w-2xl mx-auto leading-relaxed">
             Prvotriedne hliníkové brány a oplotenia na mieru s doživotnou odolnosťou voči korózii a nadčasovým dizajnom.
           </p>
         </div>
