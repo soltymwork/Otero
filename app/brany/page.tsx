@@ -24,7 +24,7 @@ export default function BranyPage() {
         </div>
         
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-16">
-          <h1 className="text-4xl md:text-7xl font-bold text-white uppercase tracking-[0.2em] mb-6 [text-shadow:0_0_30px_rgba(255,255,255,0.6)]">
+          <h1 className="text-4xl md:text-7xl font-bold text-white uppercase tracking-[0.2em] mb-6 [text-shadow:0_0_12px_rgba(255,255,255,0.2)]">
             Elegancia<br />Otero AluGates
           </h1>
           <p className="text-sm md:text-base text-white tracking-widest font-light uppercase max-w-2xl mx-auto leading-relaxed">
