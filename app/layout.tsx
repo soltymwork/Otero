@@ -21,7 +21,12 @@ export const metadata: Metadata = {
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="sk">
-      <body className={`${outfit.variable} ${archivoBlack.variable} font-sans antialiased`} suppressHydrationWarning>{children}</body>
+      <body className={`${outfit.variable} ${archivoBlack.variable} font-sans antialiased`} suppressHydrationWarning>
+        {children}
+        <div className="fixed bottom-4 right-4 z-[9999] bg-black/80 text-white/70 text-[10px] tracking-widest uppercase px-3 py-2 pointer-events-none">
+          Vizuálny návrh — Soltym
+        </div>
+      </body>
     </html>
   );
 }
