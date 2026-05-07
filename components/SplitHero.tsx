@@ -8,21 +8,22 @@ import Image from 'next/image';
 export default function SplitHero() {
   const [hoveredSide, setHoveredSide] = useState<'left' | 'right' | null>(null);
 
-  const leftWidth = hoveredSide === 'left' ? '65%' : hoveredSide === 'right' ? '35%' : '50%';
-
   return (
-    <div
-      className="relative h-screen w-full overflow-hidden bg-white"
-      onMouseLeave={() => setHoveredSide(null)}
-    >
-      {/* Ľavý panel — fotka na plnú šírku, orezie sa cez clip */}
+    <div className="h-screen w-full bg-white p-4 md:p-6 flex">
+
+      {/* Ľavý panel */}
       <motion.div
-        className="absolute inset-y-0 left-0 overflow-hidden"
-        animate={{ width: leftWidth }}
+        className="relative overflow-hidden h-full"
+        animate={{ width: hoveredSide === 'left' ? '65%' : hoveredSide === 'right' ? '35%' : '50%' }}
         transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
         onMouseEnter={() => setHoveredSide('left')}
+        onMouseLeave={() => setHoveredSide(null)}
       >
-        <div className="absolute inset-y-0 left-0 w-screen">
+        <motion.div
+          className="absolute inset-0"
+          animate={{ x: hoveredSide === 'left' ? -12 : hoveredSide === 'right' ? 12 : 0, scale: 1 }}
+          transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
+        >
           <Image
             src="https://jhrgate.com/wp-content/uploads/2024/08/94.jpg"
             alt="Hliníkové brány"
@@ -30,11 +31,11 @@ export default function SplitHero() {
             priority
             className="object-cover"
           />
-        </div>
+        </motion.div>
 
         <Link href="/brany" className="absolute inset-0 flex items-center justify-center">
           <motion.div
-            className="flex flex-col items-center justify-center text-center shadow-2xl px-8 py-6"
+            className="flex flex-col items-center justify-center text-center shadow-2xl px-10 py-7"
             animate={{ backgroundColor: hoveredSide === 'left' ? '#000000' : '#ffffff' }}
             transition={{ duration: 0.4 }}
           >
@@ -56,22 +57,27 @@ export default function SplitHero() {
         </Link>
       </motion.div>
 
-      {/* Pravý panel — fotka zakotvená vpravo, orezie sa cez clip */}
+      {/* Pravý panel */}
       <motion.div
-        className="absolute inset-y-0 right-0 overflow-hidden"
+        className="relative overflow-hidden h-full"
         animate={{ width: hoveredSide === 'right' ? '65%' : hoveredSide === 'left' ? '35%' : '50%' }}
         transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
         onMouseEnter={() => setHoveredSide('right')}
+        onMouseLeave={() => setHoveredSide(null)}
       >
-        <div className="absolute inset-y-0 right-0 w-screen">
+        <motion.div
+          className="absolute inset-0"
+          animate={{ x: hoveredSide === 'right' ? 12 : hoveredSide === 'left' ? -12 : 0, scale: 1 }}
+          transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
+        >
           <Image
             src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1920&auto=format&fit=crop"
             alt="Inžinierska činnosť"
             fill
             priority
-            className="object-cover object-right"
+            className="object-cover"
           />
-        </div>
+        </motion.div>
 
         <Link href="/inzinierska-cinnost" className="absolute inset-0 flex items-center justify-center">
           <motion.div
@@ -96,6 +102,7 @@ export default function SplitHero() {
           </motion.div>
         </Link>
       </motion.div>
+
     </div>
   );
 }
