@@ -59,7 +59,7 @@ export default function StatsSection() {
   }, []);
 
   return (
-    <section ref={ref} className="py-16 px-6 border-b border-white/10 bg-[#111111]">
+    <section ref={ref} className="py-16 px-6 border-b border-white/10 bg-black">
       <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-white/10 overflow-hidden">
         {stats.map((stat) => (
           <StatItem key={stat.label} stat={stat} started={started} />
