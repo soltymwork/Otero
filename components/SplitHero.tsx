@@ -21,22 +21,25 @@ export default function SplitHero() {
   const modalTransition = { duration: 0.6 } as const;
 
   return (
-    <div className="h-[100dvh] w-full bg-white flex flex-col md:flex-row p-4 md:p-6" style={{ gap: isDesktop ? 0 : 8 }}>
+    <div className="h-[100dvh] w-full bg-white flex flex-col md:flex-row" style={{ padding: isDesktop ? 24 : 16, gap: 0 }}>
 
       {/* Ľavý / Horný panel */}
       <div
-        className="relative overflow-hidden flex-1 min-h-0 md:flex-none md:h-full"
+        className="relative overflow-hidden min-h-0"
         style={{
+          flex: isDesktop ? 'none' : 1,
+          height: isDesktop ? '100%' : undefined,
           width: isDesktop ? (hoveredSide === 'left' ? '60%' : hoveredSide === 'right' ? '40%' : '50%') : undefined,
           transition: 'width 1.2s cubic-bezier(0.25, 0.1, 0.25, 1)',
+          marginBottom: isDesktop ? 0 : 8,
         }}
         onMouseEnter={() => setHoveredSide('left')}
         onMouseLeave={() => setHoveredSide(null)}
       >
         <motion.div
-          className="absolute inset-0 md:inset-y-0 md:left-0"
-          style={isDesktop ? { width: '100vw' } : undefined}
-          animate={{ x: hoveredSide === 'left' ? -10 : hoveredSide === 'right' ? 10 : 0 }}
+          className="absolute inset-y-0 left-0"
+          style={{ width: isDesktop ? '100vw' : '100%' }}
+          animate={{ x: isDesktop ? (hoveredSide === 'left' ? -10 : hoveredSide === 'right' ? 10 : 0) : 0 }}
           transition={imgTransition}
         >
           <Image
@@ -78,14 +81,18 @@ export default function SplitHero() {
 
       {/* Pravý / Dolný panel */}
       <div
-        className="relative overflow-hidden flex-1 min-h-0 md:h-full"
+        className="relative overflow-hidden min-h-0"
+        style={{
+          flex: 1,
+          height: isDesktop ? '100%' : undefined,
+        }}
         onMouseEnter={() => setHoveredSide('right')}
         onMouseLeave={() => setHoveredSide(null)}
       >
         <motion.div
-          className="absolute inset-0 md:inset-y-0 md:right-0"
-          style={isDesktop ? { width: '100vw' } : undefined}
-          animate={{ x: hoveredSide === 'right' ? 10 : hoveredSide === 'left' ? -10 : 0 }}
+          className="absolute inset-y-0 right-0"
+          style={{ width: isDesktop ? '100vw' : '100%' }}
+          animate={{ x: isDesktop ? (hoveredSide === 'right' ? 10 : hoveredSide === 'left' ? -10 : 0) : 0 }}
           transition={imgTransition}
         >
           <Image
